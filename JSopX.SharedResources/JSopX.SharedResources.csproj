@@ -739,19 +739,46 @@
   </ItemGroup>
 
 
+<!--Option 1: Original-->
+
   <!--<ItemGroup>
     <ProjectReference Include="..\JSopX.ClassLibrary\JSopX.ClassLibrary\JSopX.ClassLibrary.csproj">
     </ProjectReference>
   </ItemGroup>-->
+  
+  <!--Option 2: Working version-->
+  <!--<ItemGroup>
+    
+    
+  --><!-- Default case: Reference for JSopX.SharedResources --><!--
+  
+    <ProjectReference Condition="! $([System.String]::Copy($(ProjectPath)).Contains('JSopX.OpenProjectX'))"
+                      Include="..\JSopX.ClassLibrary\JSopX.ClassLibrary\JSopX.ClassLibrary.csproj">
+    </ProjectReference>
+
+    
+  --><!-- Special case: Reference for JSopX.OpenProjectX --><!--
+  
+    <ProjectReference Condition="$([System.String]::Copy($(ProjectPath)).Contains('JSopX.OpenProjectX\JSopX.SharedResources'))"
+                      Include="..\..\JSopX.ClassLibrary\JSopX.ClassLibrary\JSopX.ClassLibrary.csproj">
+    </ProjectReference>
+  </ItemGroup>-->
+
+<!--Option 3: New code from Nova:-->
 
   <ItemGroup>
-    <!-- Default case: Reference for JSopX.WebAPI -->
+    <!-- Default case: Reference for JSopX.SharedResources -->
     <ProjectReference Condition="! $([System.String]::Copy($(ProjectPath)).Contains('JSopX.OpenProjectX'))"
                       Include="..\JSopX.ClassLibrary\JSopX.ClassLibrary\JSopX.ClassLibrary.csproj">
     </ProjectReference>
 
     <!-- Special case: Reference for JSopX.OpenProjectX -->
     <ProjectReference Condition="$([System.String]::Copy($(ProjectPath)).Contains('JSopX.OpenProjectX\JSopX.SharedResources'))"
+                      Include="..\..\JSopX.ClassLibrary\JSopX.ClassLibrary\JSopX.ClassLibrary.csproj">
+    </ProjectReference>
+
+    <!-- Additional case for JSopX.AspNetCore -->
+    <ProjectReference Condition="$([System.String]::Copy($(ProjectPath)).Contains('JSopX.AspNetCore\JSopX.SharedResources'))"
                       Include="..\..\JSopX.ClassLibrary\JSopX.ClassLibrary\JSopX.ClassLibrary.csproj">
     </ProjectReference>
   </ItemGroup>
