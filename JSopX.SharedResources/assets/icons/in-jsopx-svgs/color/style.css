@@ -1,0 +1,101 @@
+/* Generated using nucleoapp.com */
+
+/* --------------------------------
+
+General
+
+-------------------------------- */
+
+.jsopx-icon {
+  display: inline-block;
+  color: inherit; /* icon primary color */
+  height: 1em;
+  width: 1em;
+  line-height: 1;
+  flex-shrink: 0;
+  max-width: initial;
+}
+
+.jsopx-icon use {
+  /* icon secondary color */
+  fill: currentColor;
+  stroke: currentColor;
+}
+
+/* --------------------------------
+
+Themes
+
+-------------------------------- */
+
+.jsopx-icon-theme-1 {
+  color: #000000;
+}
+
+.jsopx-icon-theme-1 use {
+  fill: inherit;
+  stroke: inherit;
+}
+
+/* --------------------------------
+
+Sizes
+
+-------------------------------- */
+
+/* relative units */
+.jsopx-icon-sm {
+  font-size: 0.8em;
+}
+
+.jsopx-icon-lg {
+  font-size: 1.2em;
+}
+
+/* absolute units */
+.jsopx-icon-16 {
+  font-size: 16px;
+}
+
+.jsopx-icon-32 {
+  font-size: 32px;
+}
+
+/* --------------------------------
+
+Transformations/Animations
+
+-------------------------------- */
+
+.jsopx-icon-rotate-90 {
+  transform: rotate(90deg);
+}
+
+.jsopx-icon-rotate-180 {
+  transform: rotate(180deg);
+}
+
+.jsopx-icon-rotate-270 {
+  transform: rotate(270deg);
+}
+
+.jsopx-icon-flip-y {
+  transform: scaleY(-1);
+}
+
+.jsopx-icon-flip-x {
+  transform: scaleX(-1);
+}
+
+.jsopx-icon-is-spinning {
+  animation: icon-spin 1s infinite linear;
+}
+
+@keyframes icon-spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

@@ -1,0 +1,46 @@
+html,
+body {
+
+    height: 100% !important;
+
+}
+
+.form-signin {
+  max-width: 330px;
+  padding: 1rem;
+}
+
+.form-signin .form-floating:focus-within {
+  z-index: 2;
+}
+
+.form-signin input[type="email"] {
+  margin-bottom: -1px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.form-signin input[type="password"] {
+  margin-bottom: 10px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+.dropdown-menu {
+    max-height: 300px; /* Adjust the height as needed */
+    overflow-y: auto;
+    scrollbar-width: thin; /* Firefox */
+}
+
+    .dropdown-menu::-webkit-scrollbar {
+        width: 6px; /* Width of the scrollbar */
+    }
+
+    .dropdown-menu::-webkit-scrollbar-thumb {
+        background-color: rgba(0, 0, 0, 0.2); /* Color of the scrollbar */
+        border-radius: 3px;
+    }
+
+        .dropdown-menu::-webkit-scrollbar-thumb:hover {
+            background-color: rgba(0, 0, 0, 0.4); /* Color on hover */
+        }

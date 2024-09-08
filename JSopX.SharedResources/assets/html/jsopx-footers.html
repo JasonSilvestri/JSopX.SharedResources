@@ -1,0 +1,527 @@
+<!doctype html>
+<html lang="en" data-bs-theme="auto">
+<head>
+    <script src="../../assets/js/color-modes.js"></script>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>JSopX&trade; Open Project EXperiences Collection of Projects by Jason Silvestri · Featuring the Razor Class Library · Footers · Bootstrap v5.3</title>
+
+    <meta name="description" content="The custom jSilvestri.com BETA v 2024 JSopX Series Demo Collection Project by Jason Silvestri is a comprehensive suite of demonstration projects designed to showcase the integration and usage of various front-end frameworks (Angular, React, Vue, Blazor) with ASP.NET Core 8 Web API, and the reuse of app building materials across all project!">
+    <meta name="keywords" content="Jason Silvestri,JSopX,Bootstrap, Asp.NET Core,C#,Android,Blazor,Blazor Hybrid,iOS,Mac Catalyst,macOS,MAUI,Mobile,Tizen,Windows,Angular,React,Vue,NodeJS,HTML,CSS,JS,TypeScript,npm,vite">
+    <meta name="author" content="Jason Silvestri">
+
+    <link rel="icon" type="image/x-icon" href="./favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png">
+    <link rel="manifest" href="./site.webmanifest">
+    <link rel="mask-icon" href="./safari-pinned-tab.svg" color="#1a6ae3">
+    <meta name="msapplication-TileColor" content="#1a6ae3">
+    <meta name="msapplication-TileImage" content="./mstile-144x144.png">
+    <meta name="theme-color" content="#1a6ae3">
+
+
+    <link href="../../assets/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../../assets/css/jsopx-main.css" rel="stylesheet">
+    <link href="../../assets/css/jsopx-headers.css" rel="stylesheet">
+    <link href="../../assets/css/jsopx-navbar-fixed.css" rel="stylesheet">
+    <link href="../../assets/css/jsopx-navbars-offcanvas.css" rel="stylesheet">
+
+    <style>
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            user-select: none;
+        }
+
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+                font-size: 3.5rem;
+            }
+        }
+
+        .b-example-divider {
+            width: 100%;
+            height: 3rem;
+            background-color: rgba(0, 0, 0, .1);
+            border: solid rgba(0, 0, 0, .15);
+            border-width: 1px 0;
+            box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+        }
+
+        .b-example-vr {
+            flex-shrink: 0;
+            width: 1.5rem;
+            height: 100vh;
+        }
+
+        .bi {
+            vertical-align: -.125em;
+            fill: currentColor;
+        }
+
+        .nav-scroller {
+            position: relative;
+            z-index: 2;
+            height: 2.75rem;
+            overflow-y: hidden;
+        }
+
+            .nav-scroller .nav {
+                display: flex;
+                flex-wrap: nowrap;
+                padding-bottom: 1rem;
+                margin-top: -1px;
+                overflow-x: auto;
+                text-align: center;
+                white-space: nowrap;
+                -webkit-overflow-scrolling: touch;
+            }
+
+        .btn-bd-primary {
+            --bd-violet-bg: #712cf9;
+            --bd-violet-rgb: 112.520718, 44.062154, 249.437846;
+            --bs-btn-font-weight: 600;
+            --bs-btn-color: var(--bs-white);
+            --bs-btn-bg: var(--bd-violet-bg);
+            --bs-btn-border-color: var(--bd-violet-bg);
+            --bs-btn-hover-color: var(--bs-white);
+            --bs-btn-hover-bg: #6528e0;
+            --bs-btn-hover-border-color: #6528e0;
+            --bs-btn-focus-shadow-rgb: var(--bd-violet-rgb);
+            --bs-btn-active-color: var(--bs-btn-hover-color);
+            --bs-btn-active-bg: #5a23c8;
+            --bs-btn-active-border-color: #5a23c8;
+        }
+
+        .bd-mode-toggle {
+            z-index: 1500;
+        }
+
+            .bd-mode-toggle .dropdown-menu .active .bi {
+                display: block !important;
+            }
+    </style>
+
+
+</head>
+<body>
+    <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
+        <symbol id="check2" viewBox="0 0 16 16">
+            <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z" />
+        </symbol>
+        <symbol id="circle-half" viewBox="0 0 16 16">
+            <path d="M8 15A7 7 0 1 0 8 1v14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z" />
+        </symbol>
+        <symbol id="moon-stars-fill" viewBox="0 0 16 16">
+            <path d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z" />
+            <path d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z" />
+        </symbol>
+        <symbol id="sun-fill" viewBox="0 0 16 16">
+            <path d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z" />
+        </symbol>
+        <symbol id="jsopx-icon-house-fill" viewBox="0 0 16 16"><g class="nc-icon-wrapper"><path d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L8 2.207l6.646 6.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293z" stroke="none"></path><path d="m8 3.293 6 6V13.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5V9.293z" stroke="none"></path></g></symbol>
+    </svg>
+
+    <div class="dropdown position-fixed bottom-0 end-0 mb-3 me-3 bd-mode-toggle">
+        <button class="btn btn-bd-primary py-2 dropdown-toggle d-flex align-items-center"
+                id="bd-theme"
+                type="button"
+                aria-expanded="false"
+                data-bs-toggle="dropdown"
+                aria-label="Toggle theme (auto)">
+            <svg class="bi my-1 theme-icon-active" width="1em" height="1em"><use href="#circle-half"></use></svg>
+            <span class="visually-hidden" id="bd-theme-text">Toggle theme</span>
+        </button>
+        <ul class="dropdown-menu dropdown-menu-end shadow" aria-labelledby="bd-theme-text">
+            <li>
+                <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="light" aria-pressed="false">
+                    <svg class="bi me-2 opacity-50" width="1em" height="1em"><use href="#sun-fill"></use></svg>
+                    Light
+                    <svg class="bi ms-auto d-none" width="1em" height="1em"><use href="#check2"></use></svg>
+                </button>
+            </li>
+            <li>
+                <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark" aria-pressed="false">
+                    <svg class="bi me-2 opacity-50" width="1em" height="1em"><use href="#moon-stars-fill"></use></svg>
+                    Dark
+                    <svg class="bi ms-auto d-none" width="1em" height="1em"><use href="#check2"></use></svg>
+                </button>
+            </li>
+            <li>
+                <button type="button" class="dropdown-item d-flex align-items-center active" data-bs-theme-value="auto" aria-pressed="true">
+                    <svg class="bi me-2 opacity-50" width="1em" height="1em"><use href="#circle-half"></use></svg>
+                    Auto
+                    <svg class="bi ms-auto d-none" width="1em" height="1em"><use href="#check2"></use></svg>
+                </button>
+            </li>
+            <li>
+                <a href="#" class="dropdown-item d-flex align-items-center">
+                    <svg class="bi me-2 opacity-50" width="1em" height="1em"><use href="#jsopx-icon-house-fill"></use></svg>
+                    Back to Top
+
+                </a>
+            </li>
+        </ul>
+    </div>
+
+
+    <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
+        <symbol id="bootstrap" viewBox="0 0 118 94">
+            <title>Bootstrap</title>
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M24.509 0c-6.733 0-11.715 5.893-11.492 12.284.214 6.14-.064 14.092-2.066 20.577C8.943 39.365 5.547 43.485 0 44.014v5.972c5.547.529 8.943 4.649 10.951 11.153 2.002 6.485 2.28 14.437 2.066 20.577C12.794 88.106 17.776 94 24.51 94H93.5c6.733 0 11.714-5.893 11.491-12.284-.214-6.14.064-14.092 2.066-20.577 2.009-6.504 5.396-10.624 10.943-11.153v-5.972c-5.547-.529-8.934-4.649-10.943-11.153-2.002-6.484-2.28-14.437-2.066-20.577C105.214 5.894 100.233 0 93.5 0H24.508zM80 57.863C80 66.663 73.436 72 62.543 72H44a2 2 0 01-2-2V24a2 2 0 012-2h18.437c9.083 0 15.044 4.92 15.044 12.474 0 5.302-4.01 10.049-9.119 10.88v.277C75.317 46.394 80 51.21 80 57.863zM60.521 28.34H49.948v14.934h8.905c6.884 0 10.68-2.772 10.68-7.727 0-4.643-3.264-7.207-9.012-7.207zM49.948 49.2v16.458H60.91c7.167 0 10.964-2.876 10.964-8.281 0-5.406-3.903-8.178-11.425-8.178H49.948z"></path>
+        </symbol>
+        <symbol id="facebook" viewBox="0 0 24 24">
+            <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z" />
+        </symbol>
+        <symbol id="github" viewBox="0 0 24 24">
+            <path fill="currentColor" class="bi bi-github" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8" />
+        </symbol>
+        <symbol id="twitter" viewBox="0 0 24 24">
+            <path fill="currentColor" class="bi bi-twitter" d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334q.002-.211-.006-.422A6.7 6.7 0 0 0 16 3.542a6.7 6.7 0 0 1-1.889.518 3.3 3.3 0 0 0 1.447-1.817 6.5 6.5 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.32 9.32 0 0 1-6.767-3.429 3.29 3.29 0 0 0 1.018 4.382A3.3 3.3 0 0 1 .64 6.575v.045a3.29 3.29 0 0 0 2.632 3.218 3.2 3.2 0 0 1-.865.115 3 3 0 0 1-.614-.057 3.28 3.28 0 0 0 3.067 2.277A6.6 6.6 0 0 1 .78 13.58a6 6 0 0 1-.78-.045A9.34 9.34 0 0 0 5.026 15" />
+        </symbol>
+        <symbol id="twitter-x" viewBox="0 0 24 24">
+            <path fill="currentColor" class="bi bi-twitter-x" d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865z" />
+        </symbol>
+        <symbol id="linkedin" viewBox="0 0 24 24">
+            <path fill="currentColor" class="bi bi-linkedin" d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z" />
+        </symbol>
+        <symbol id="official" fill="currentColor" class="bi bi-house-check-fill" viewBox="0 0 24 24">
+            <path d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L8 2.207l6.646 6.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293z" />
+            <path d="m8 3.293 4.712 4.712A4.5 4.5 0 0 0 8.758 15H3.5A1.5 1.5 0 0 1 2 13.5V9.293z" />
+            <path d="M12.5 16a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7m1.679-4.493-1.335 2.226a.75.75 0 0 1-1.174.144l-.774-.773a.5.5 0 0 1 .708-.707l.547.547 1.17-1.951a.5.5 0 1 1 .858.514" />
+        </symbol>
+
+        <symbol id="verified-patch" fill="currentColor" class="bi bi-patch-check" viewBox="0 0 24 24">
+            <path fill-rule="evenodd" d="M10.354 6.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7 8.793l2.646-2.647a.5.5 0 0 1 .708 0" />
+            <path d="m10.273 2.513-.921-.944.715-.698.622.637.89-.011a2.89 2.89 0 0 1 2.924 2.924l-.01.89.636.622a2.89 2.89 0 0 1 0 4.134l-.637.622.011.89a2.89 2.89 0 0 1-2.924 2.924l-.89-.01-.622.636a2.89 2.89 0 0 1-4.134 0l-.622-.637-.89.011a2.89 2.89 0 0 1-2.924-2.924l.01-.89-.636-.622a2.89 2.89 0 0 1 0-4.134l.637-.622-.011-.89a2.89 2.89 0 0 1 2.924-2.924l.89.01.622-.636a2.89 2.89 0 0 1 4.134 0l-.715.698a1.89 1.89 0 0 0-2.704 0l-.92.944-1.32-.016a1.89 1.89 0 0 0-1.911 1.912l.016 1.318-.944.921a1.89 1.89 0 0 0 0 2.704l.944.92-.016 1.32a1.89 1.89 0 0 0 1.912 1.911l1.318-.016.921.944a1.89 1.89 0 0 0 2.704 0l.92-.944 1.32.016a1.89 1.89 0 0 0 1.911-1.912l-.016-1.318.944-.921a1.89 1.89 0 0 0 0-2.704l-.944-.92.016-1.32a1.89 1.89 0 0 0-1.912-1.911z" />
+        </symbol>
+    </svg>
+    <svg xmlns="http://www.w3.org/2000/svg" class="d-none" fill="currentColor">
+        <symbol id="jsopx-icon-jsopx-logo-alternate-header-white" class="d-none" viewBox="0 0 118 94">
+
+            <path d="M1 16C1 13.7909 2.79086 12 5 12H59C61.2091 12 63 13.7909 63 16V60C63 62.2091 61.2091 64 59 64H5C2.79086 64 1 62.2091 1 60V16Z" fill="#fff"></path>
+            <path d="M21.5961 11.021L52.4008 3.40301L53.3148 11.9608L21.5961 11.021Z" fill="#D9D9D9"></path>
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M56 6.00295C56 2.09953 52.3317 -0.764619 48.5448 0.182101L5.72991 10.8858C2.54155 11.0271 0 13.6566 0 16.8798V52.8798C0 55.1436 1.25366 57.1145 3.10457 58.1363C3.10154 58.0912 3.1 58.0458 3.1 58V52C3.1 51.3018 3.45778 50.6871 4 50.3294V47.584C2.2341 46.8124 1 45.0503 1 43C1 40.9497 2.2341 39.1876 4 38.416V35.584C2.2341 34.8124 1 33.0503 1 31C1 28.9497 2.2341 27.1876 4 26.416V23.584C2.2341 22.8124 1 21.0503 1 19C1 16.2386 3.23858 14 6 14C7.05203 14 8.02817 14.3249 8.83355 14.8798H55.1665C55.9718 14.3249 56.948 14 58 14C60.7614 14 63 16.2386 63 19C63 21.0503 61.7659 22.8124 60 23.584V26.416C61.7659 27.1876 63 28.9497 63 31C63 33.0503 61.7659 34.8124 60 35.584V38.416C61.7659 39.1876 63 40.9497 63 43C63 45.0503 61.7659 46.8124 60 47.584V50.3294C60.5422 50.6871 60.9 51.3018 60.9 52V58C60.9 58.0458 60.8985 58.0912 60.8954 58.1363C62.7463 57.1145 64 55.1436 64 52.8798V16.8798C64 13.5661 61.3137 10.8798 58 10.8798H56V6.00295ZM52 10.8798H22.2462L49.5149 4.06267C50.7772 3.7471 52 4.70181 52 6.00295V10.8798Z"></path>
+            <path d="M29.3168 49.2522C29.8583 49.3607 30.2093 49.8876 30.1008 50.4292L27.7433 62.1953C27.6348 62.7368 27.1078 63.0879 26.5663 62.9794L20.6832 61.8006C20.1417 61.6921 19.7907 61.1651 19.8992 60.6236L22.2567 48.8575C22.3652 48.316 22.8922 47.9649 23.4337 48.0734L29.3168 49.2522ZM23.6302 47.0929C22.5471 46.8759 21.4932 47.578 21.2762 48.661L18.9187 60.4272C18.7017 61.5102 19.4037 62.5641 20.4868 62.7811L26.3698 63.9599C27.4529 64.1769 28.5068 63.4748 28.7238 62.3918L31.0813 50.6256C31.2983 49.5426 30.5963 48.4887 29.5132 48.2717L23.6302 47.0929Z"></path>
+            <path d="M23.8212 61.4095C24.3628 61.518 24.8897 61.1669 24.9982 60.6254C25.1067 60.0839 24.7557 59.5569 24.2142 59.4484C23.6726 59.3399 23.1457 59.691 23.0372 60.2325C22.9287 60.774 23.2797 61.301 23.8212 61.4095Z"></path>
+            <path d="M32.9637 49.5277C33.167 49.0142 33.748 48.7627 34.2616 48.9659L45.4191 53.3828C45.9327 53.586 46.1841 54.1671 45.9809 54.6806L43.0363 62.119C42.833 62.6325 42.252 62.884 41.7385 62.6807L30.5809 58.2639C30.0674 58.0606 29.8159 57.4796 30.0191 56.9661L32.9637 49.5277ZM29.0893 56.598C28.6828 57.625 29.1858 58.7872 30.2128 59.1937L41.3704 63.6105C42.3974 64.0171 43.5596 63.5141 43.9661 62.4871L46.9107 55.0487C47.3172 54.0217 46.8142 52.8595 45.7872 52.453L34.6296 48.0361C33.6026 47.6296 32.4404 48.1326 32.0339 49.1596L29.0893 56.598Z"></path>
+            <path d="M43.5788 58.0317C43.7821 57.5182 43.5306 56.9372 43.0171 56.7339C42.5035 56.5306 41.9225 56.7821 41.7192 57.2956C41.5159 57.8091 41.7674 58.3902 42.2809 58.5935C42.7944 58.7968 43.3755 58.5453 43.5788 58.0317Z"></path>
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M6 51.8C4 51.8 4 53.8 4 53.8V59.8C4 61.8 6 61.8 6 61.8H10C10 62.4667 9.91667 62.9667 9.75 63.3H9C8.72386 63.3 8.5 63.5239 8.5 63.8H15.5C15.5 63.5239 15.2761 63.3 15 63.3H14.25C14.0833 62.9667 14 62.4667 14 61.8H18C20 61.8 20 59.8 20 59.8V53.8C20 51.8 18 51.8 18 51.8H6ZM5.39845 52.9446C5.49771 52.8784 5.67498 52.8 6 52.8H17.991C17.995 52.8002 18.003 52.8005 18.0147 52.8014C18.0428 52.8034 18.0895 52.8079 18.1481 52.8176C18.2701 52.838 18.4175 52.8768 18.5528 52.9444C18.6842 53.0101 18.7851 53.0929 18.8554 53.1985C18.9216 53.2977 19 53.475 19 53.8V59.791C18.9998 59.795 18.9995 59.803 18.9986 59.8147C18.9966 59.8428 18.9921 59.8895 18.9824 59.9481C18.962 60.0701 18.9232 60.2175 18.8556 60.3528C18.7899 60.4842 18.7071 60.5851 18.6016 60.6555C18.5023 60.7216 18.325 60.8 18 60.8H6.00903C6.00504 60.7998 5.99697 60.7995 5.98531 60.7986C5.95721 60.7966 5.91053 60.7921 5.8519 60.7824C5.72989 60.762 5.5825 60.7232 5.44721 60.6556C5.31584 60.5899 5.21489 60.5071 5.14455 60.4016C5.07838 60.3023 5 60.125 5 59.8V53.809C5.00016 53.805 5.00053 53.797 5.00136 53.7853C5.00337 53.7572 5.00787 53.7105 5.01764 53.6519C5.03798 53.5299 5.07678 53.3825 5.14443 53.2472C5.21011 53.1158 5.29294 53.0149 5.39845 52.9446Z"></path>
+            <path d="M58.5 52.8C58.7761 52.8 59 53.0239 59 53.3V60.8H47V53.3C47 53.0239 47.2239 52.8 47.5 52.8H58.5ZM47.5 51.8C46.6716 51.8 46 52.4716 46 53.3V61.8H60V53.3C60 52.4716 59.3284 51.8 58.5 51.8H47.5Z"></path>
+            <path d="M45 62.3H61C61 63.1284 60.3284 63.8 59.5 63.8H46.5C45.6716 63.8 45 63.1284 45 62.3Z"></path>
+            <path d="M21.1396 37.2974V18.2734H27.8047V37.2974C27.8047 39.1509 27.3794 40.7568 26.5288 42.1152C25.6909 43.4736 24.5483 44.5273 23.1011 45.2764C21.6665 46.0127 20.0542 46.3809 18.2642 46.3809C16.4106 46.3809 14.7603 46.0698 13.313 45.4478C11.8784 44.8257 10.7485 43.8672 9.92334 42.5723C9.11084 41.2773 8.70459 39.627 8.70459 37.6211H15.4077C15.4077 38.5605 15.5156 39.2969 15.7314 39.8301C15.9473 40.3506 16.2646 40.7188 16.6836 40.9346C17.1152 41.1377 17.6421 41.2393 18.2642 41.2393C18.8735 41.2393 19.3877 41.0869 19.8066 40.7822C20.2383 40.4648 20.5684 40.0142 20.7969 39.4302C21.0254 38.8335 21.1396 38.1226 21.1396 37.2974Z"></path>
+            <path d="M46.3335 38.6304C46.3335 38.1987 46.27 37.8115 46.1431 37.4688C46.0161 37.1133 45.7812 36.7832 45.4385 36.4785C45.0957 36.1738 44.6006 35.8691 43.9531 35.5645C43.3184 35.2471 42.4805 34.917 41.4395 34.5742C40.2207 34.168 39.0464 33.7109 37.9165 33.2031C36.7866 32.6826 35.7773 32.0796 34.8887 31.394C34 30.6958 33.2954 29.8833 32.7749 28.9565C32.2544 28.0171 31.9941 26.9253 31.9941 25.6812C31.9941 24.4878 32.2607 23.415 32.7939 22.4629C33.3271 21.498 34.0698 20.6792 35.022 20.0063C35.9868 19.3208 37.1167 18.8003 38.4116 18.4448C39.7065 18.0767 41.1221 17.8926 42.6582 17.8926C44.6895 17.8926 46.4795 18.248 48.0283 18.959C49.5898 19.6572 50.8086 20.6538 51.6846 21.9487C52.5732 23.231 53.0176 24.748 53.0176 26.5H46.3716C46.3716 25.8018 46.2256 25.186 45.9336 24.6528C45.6543 24.1196 45.229 23.7007 44.6577 23.396C44.0864 23.0913 43.3691 22.939 42.5059 22.939C41.668 22.939 40.9634 23.0659 40.3921 23.3198C39.8208 23.5737 39.3892 23.9165 39.0972 24.3481C38.8052 24.7671 38.6592 25.2305 38.6592 25.7383C38.6592 26.1572 38.7734 26.5381 39.002 26.8809C39.2432 27.2109 39.5796 27.522 40.0112 27.814C40.4556 28.106 40.9888 28.3853 41.6108 28.6519C42.2456 28.9185 42.9565 29.1787 43.7437 29.4326C45.2163 29.9023 46.5239 30.4292 47.6665 31.0132C48.8218 31.5845 49.793 32.2383 50.5801 32.9746C51.3799 33.6982 51.9829 34.5234 52.3892 35.4502C52.8081 36.377 53.0176 37.4243 53.0176 38.5923C53.0176 39.8364 52.7764 40.9409 52.2939 41.9058C51.8115 42.8706 51.1196 43.6895 50.2183 44.3623C49.3169 45.0225 48.2378 45.5239 46.981 45.8667C45.7241 46.2095 44.3213 46.3809 42.7725 46.3809C41.3506 46.3809 39.9478 46.2031 38.564 45.8477C37.1929 45.4795 35.9487 44.9209 34.8315 44.1719C33.7144 43.4102 32.8193 42.439 32.1465 41.2583C31.4863 40.0649 31.1562 38.6494 31.1562 37.0117H37.8594C37.8594 37.8242 37.9673 38.5098 38.1831 39.0684C38.3989 39.627 38.7163 40.0776 39.1353 40.4204C39.5542 40.7505 40.0684 40.9917 40.6777 41.144C41.2871 41.2837 41.9854 41.3535 42.7725 41.3535C43.623 41.3535 44.3086 41.2329 44.8291 40.9917C45.3496 40.7378 45.7305 40.4077 45.9717 40.0015C46.2129 39.5825 46.3335 39.1255 46.3335 38.6304Z"></path>
+        </symbol>
+    </svg>
+
+
+    <header data-bs-theme="light">
+
+        <nav class="navbar navbar-expand-md navbar-expand-lg fixed-top  navbar-dark bg-dark shadow" aria-label="JSopX Responsive Off Canvas Navbar Large">
+            <div class="container-fluid">
+                <!--<a href="index.html" class="navbar-brand d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
+                    <svg class="bi me-2" width="40" height="32" role="img" aria-label="Jsopx"><use xlink:href="jsopx-logo-white-fill"></use></svg>
+                </a>-->
+                <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3 fs-6 text-white" href="../../assets/html/index.html">JSopX<span class="trademark-symbol">&trade;</span> <smaller>by Jason Silvestri</smaller></a>
+
+                <!--<a class="navbar-brand" href="#">JSopX&trade;</a>-->
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar2" aria-controls="offcanvasNavbar2" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasNavbar2" aria-labelledby="offcanvasNavbar2Label">
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title" id="offcanvasNavbar2Label">JSopX<span class="trademark-symbol">&trade;</span> <smaller>by Jason Silvestri</smaller></h5>
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                            <li class="nav-item">
+                                <a class="nav-link" href="../../assets/html/index.html">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="../../assets/html/jsopx-about.html">About</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle active" aria-current="page" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    RCLxProper Project
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="../../assets/html/index.html">Home</a></li>
+                                    <li><a class="dropdown-item" href="../../assets/html/jsopx-about.html">About</a></li>
+                                    <li><a class="dropdown-item" href="../../assets/html/jsopx-custom-dashboard.html">Dashboard</a></li>
+                                    <li><a class="dropdown-item" href="../../assets/html/jsopx-sign-in.html">Login</a></li>
+                                    <li><a class="dropdown-item" href="../../assets/html/jsopx-sign-up.html">Sign Up</a></li>
+                                    <li><a class="dropdown-item" href="../../assets/html/jsopx-weather-web-api.html">Weather API</a></li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li>
+                                        <span class="dropdown-item fw-semibold">
+                                            Featurette Samples
+                                        </span>
+                                    </li>                                    <li><a class="dropdown-item" href="../../assets/html/jsopx-about.html">Introduction</a></li>
+                                    <li><a class="dropdown-item" href="../../assets/html/jsopx-badges.html">Badges</a></li>
+                                    <li><a class="dropdown-item" href="../../assets/html/jsopx-cheatsheet.html">Cheat Sheet</a></li>
+                                    <li><a class="dropdown-item" href="../../assets/html/jsopx-dashboard.html">Dashboard</a></li>
+                                    <li><a class="dropdown-item" href="../../assets/html/jsopx-carousel.html">Carousel</a></li>
+                                    <li><a class="dropdown-item" href="../../assets/html/jsopx-features.html">Features</a></li>
+                                    <li><a class="dropdown-item" href="../../assets/html/jsopx-heroes.html">Heroes</a></li>
+                                    <li><a class="dropdown-item" href="../../assets/html/jsopx-icons.html">Icons</a></li>
+                                    <li><a class="dropdown-item" href="../../assets/html/jsopx-fonts.html">Fonts</a></li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+
+                                    <li>
+                                        <span class="dropdown-item fw-semibold">
+                                            Layout Samples
+                                        </span>
+                                    </li>
+                                    <li><a class="dropdown-item" href="../../assets/html/jsopx-headers.html">Headers</a></li>
+                                    <li><a class="dropdown-item active" href="../../assets/html/jsopx-footers.html" aria-current="true">Footers</a></li>
+                                    <li><a class="dropdown-item" href="../../assets/html/jsopx-navbars.html">Navbars</a></li>
+                                    <li><a class="dropdown-item" href="../../assets/html/jsopx-header-navbar-fixed.html">Navbars Fixed</a></li>
+                                    <li><a class="dropdown-item" href="../../assets/html/jsopx-sidebars.html">Sidebars</a></li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li>
+                                        <span class="dropdown-item fw-semibold">
+                                            Page Templates
+                                        </span>
+                                    </li>
+
+                                    <li><a class="dropdown-item" href="../../assets/html/jsopx-starter-template.html">Starter Template</a></li>
+                                    <li><a class="dropdown-item" href="../../assets/html/jsopx-advanced-template.html">Advanced Template</a></li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li>
+                                        <span class="dropdown-item fw-semibold">
+                                            Home Page Variants
+                                        </span>
+                                    </li>
+
+                                    <li><a class="dropdown-item" href="../../assets/html/index.html">Official</a></li>
+                                    <li><a class="dropdown-item" href="../../assets/html/index-static.html">Static</a></li>
+                                    <li><a class="dropdown-item" href="../../assets/html/index-off-canvas.html">Off-Canvas</a></li>
+                                    <li><a class="dropdown-item" href="../../assets/html/index-off-canvas-fixed.html">Off-Canvas Fixed</a></li>
+                                    <li><a class="dropdown-item" href="../../assets/html/index-off-canvas-fixed-sidebar.html">Off-Canvas Fixed Sidebar</a></li>
+                                    <li><a class="dropdown-item" href="../../assets/html/index-off-canvas-carousel.html">Off-Canvas Carousel</a></li>
+
+                                </ul>
+                            </li>
+                        </ul>
+                        <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search">
+                            <input type="search" class="form-control form-control-dark text-bg-dark" placeholder="Search..." aria-label="Search">
+                        </form>
+
+                        <div class="text-end">
+                            <a class="btn btn-outline-light me-2" href="../../assets/html/jsopx-sign-in.html">Login</a>
+                            <a class="btn btn-warning" href="../../assets/html/jsopx-sign-up.html">Sign-up</a>
+                        </div>
+                        <!--Reactivate when a submission form is available, and comment out
+                            the links used above
+                        -->
+                        <!--<div class="text-end">
+                            <button type="button" class="btn btn-outline-light me-2">Login</button>
+                            <button type="button" class="btn btn-warning">Sign-up</button>
+                        </div>-->
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+    </header>
+
+    <div class="container my-5">
+        <div class="jsopx-callout jsopx-callout-warning">
+            <p>
+                <strong>Something to Think About:</strong>  <a href="../../assets/html/jsopx-headers.html">Headers</a>, <a href="../../assets/html/jsopx-footers.html">Footers</a>, <a href="../../assets/html/jsopx-navbars.html">Navbars</a>, <a href="../../assets/html/jsopx-sidebars.html">Sidebars</a> &amp; <a href="../../assets/html/jsopx-navbars.html">Off-Canvas Menus</a> are all awesome ways to connect features and reduce redundant menus. However, take it slow. Carefully explore each section and the source. Done right, it looks epic. Done wrong, like the wrong placement of a component, could induce unwanted results.
+            </p>
+        </div>
+        <div class="bg-body-tertiary p-2 rounded">
+            <div class="col-12 py-5 mx-auto">
+
+                <h1 class="display-6 fw-normal"><span class="text-body-secondary fs-4">JSopX</span>.Footers</h1>
+                <p class="fs-5">This example shows how responsive footers can work in conjunction with navbars, headers, off-canvas menus, etc. For positioning of navbars, checkout the <a href="../../assets/html/index-static.html">top</a> and <a href="../../assets/html/jsopx-header-navbar-fixed.html">fixed top</a> examples.</p>
+
+                <p><span class="fw-semibold">As shown <em>below</em></span>, you wll see <span class="fw-semibold"><em>Footer</em></span> <em>Variants</em> —all with responsive design on the mind. Resize your browser window to the large breakpoint to see the toggle for the offcanvas.</p>
+            </div>
+        </div>
+    </div>
+    <div class="b-example-divider"></div>
+
+    <div class="container">
+        <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+            <p class="col-md-4 mb-0 text-body-secondary">&copy; 2024 Company, Inc</p>
+
+            <a href="/" class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
+                <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap" /></svg>
+            </a>
+
+            <ul class="nav col-md-4 justify-content-end">
+                <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Home</a></li>
+                <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Features</a></li>
+                <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Pricing</a></li>
+                <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">FAQs</a></li>
+                <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">About</a></li>
+            </ul>
+        </footer>
+    </div>
+
+    <div class="b-example-divider"></div>
+
+    <div class="container">
+        <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+            <div class="col-md-4 d-flex align-items-center">
+                <a href="/" class="mb-3 me-2 mb-md-0 text-body-secondary text-decoration-none lh-1">
+                    <svg class="bi" width="30" height="24"><use xlink:href="#bootstrap" /></svg>
+                </a>
+                <span class="mb-3 mb-md-0 text-body-secondary">&copy; 2024 Company, Inc</span>
+            </div>
+
+            <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+                <li class="ms-3"><a class="text-body-secondary" href="https://www.jsilvestri.com" tagret="_blank" rel="noopener"><svg class="bi" width="24" height="24"><use xlink:href="#official"></use></svg></a></li>
+                <li class="ms-3"><a class="text-body-secondary" href="https://www.x.com/JasonSilvestri" tagret="_blank" rel="noopener"><svg class="bi" width="24" height="24"><use xlink:href="#twitter-x"></use></svg></a></li>
+                <li class="ms-3"><a class="text-body-secondary" href="https://www.linkedin.com/in/JasonSilvestri" tagret="_blank" rel="noopener"><svg class="bi" width="24" height="24"><use xlink:href="#linkedin"></use></svg></a></li>
+                <li class="ms-3"><a class="text-body-secondary" href="https://www.github.com/JasonSilvestri" tagret="_blank" rel="noopener"><svg class="bi" width="24" height="24"><use xlink:href="#github"></use></svg></a></li>
+            </ul>
+        </footer>
+    </div>
+
+    <div class="b-example-divider"></div>
+
+    <div class="container">
+        <footer class="py-3 my-4">
+            <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+                <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Home</a></li>
+                <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Features</a></li>
+                <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Pricing</a></li>
+                <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">FAQs</a></li>
+                <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">About</a></li>
+            </ul>
+            <p class="text-center text-body-secondary">&copy; 2024 Company, Inc</p>
+        </footer>
+    </div>
+
+    <div class="b-example-divider"></div>
+
+    <div class="container">
+        <footer class="row row-cols-1 row-cols-sm-2 row-cols-md-5 py-5 my-5 border-top">
+            <div class="col mb-3">
+                <a href="/" class="d-flex align-items-center mb-3 link-body-emphasis text-decoration-none">
+                    <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap" /></svg>
+                </a>
+                <p class="text-body-secondary">&copy; 2024</p>
+            </div>
+
+            <div class="col mb-3">
+
+            </div>
+
+            <div class="col mb-3">
+                <h5>Section</h5>
+                <ul class="nav flex-column">
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Home</a></li>
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Features</a></li>
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Pricing</a></li>
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">FAQs</a></li>
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">About</a></li>
+                </ul>
+            </div>
+
+            <div class="col mb-3">
+                <h5>Section</h5>
+                <ul class="nav flex-column">
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Home</a></li>
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Features</a></li>
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Pricing</a></li>
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">FAQs</a></li>
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">About</a></li>
+                </ul>
+            </div>
+
+            <div class="col mb-3">
+                <h5>Section</h5>
+                <ul class="nav flex-column">
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Home</a></li>
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Features</a></li>
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Pricing</a></li>
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">FAQs</a></li>
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">About</a></li>
+                </ul>
+            </div>
+        </footer>
+    </div>
+
+    <div class="b-example-divider"></div>
+
+
+    <div class="container">
+        <footer class="py-5">
+            <div class="row">
+                <div class="col-6 col-md-2 mb-3">
+                    <h5>Section</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Home</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Features</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Pricing</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">FAQs</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">About</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-6 col-md-2 mb-3">
+                    <h5>Section</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Home</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Features</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Pricing</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">FAQs</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">About</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-6 col-md-2 mb-3">
+                    <h5>Section</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Home</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Features</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Pricing</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">FAQs</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">About</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-md-5 offset-md-1 mb-3">
+                    <form>
+                        <h5>Subscribe to my newsletter</h5>
+                        <p>Monthly digest of what's new and exciting from us.</p>
+                        <div class="d-flex flex-column flex-sm-row w-100 gap-2">
+                            <label for="newsletter1" class="visually-hidden">Email address</label>
+                            <input id="newsletter1" type="text" class="form-control" placeholder="Email address">
+                            <button class="btn btn-primary" type="button">Subscribe</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
+                <p>&copy; 2024 Company, Inc. All rights reserved.</p>
+                <ul class="list-unstyled d-flex">
+                    <li class="ms-3"><a class="link-body-emphasis" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#twitter" /></svg></a></li>
+                    <li class="ms-3"><a class="link-body-emphasis" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#instagram" /></svg></a></li>
+                    <li class="ms-3"><a class="link-body-emphasis" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#facebook" /></svg></a></li>
+                </ul>
+            </div>
+        </footer>
+    </div>
+    <script src="../../assets/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

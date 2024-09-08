@@ -1,0 +1,12 @@
+<template><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" height="24" width="24"><title>{{title}}</title><g fill="#ffffff" stroke-linejoin="miter" stroke-linecap="butt"><rect x="2" y="2" width="8" height="4" fill="none" stroke="#ffffff" stroke-linecap="square" stroke-miterlimit="10" stroke-width="2"></rect><rect x="2" y="18" width="8" height="4" fill="none" stroke="#ffffff" stroke-linecap="square" stroke-miterlimit="10" stroke-width="2"></rect><line x1="6" y1="9" x2="6" y2="15" fill="none" stroke="#ffffff" stroke-linecap="square" stroke-miterlimit="10" stroke-width="2"></line><polyline points="13 4 17 4 17 6" fill="none" stroke="#ffffff" stroke-linecap="square" stroke-miterlimit="10" stroke-width="2"></polyline><polyline points="13 20 17 20 17 18" fill="none" stroke="#ffffff" stroke-linecap="square" stroke-miterlimit="10" stroke-width="2"></polyline><polygon points="12 12 17 9 22 12 17 15 12 12" fill="none" stroke="#ffffff" stroke-linecap="square" stroke-miterlimit="10" stroke-width="2"></polygon></g></svg></template>
+
+<script>
+export default {
+	props: {
+		title: {
+			type: String,
+			default: "decision process 2"
+		}
+	}
+}
+</script>
