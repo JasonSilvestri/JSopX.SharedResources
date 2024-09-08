@@ -5,6 +5,8 @@ VisualStudioVersion = 17.10.35122.118
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JSopX.SharedResources", "JSopX.SharedResources\JSopX.SharedResources.csproj", "{70B580BB-BDE4-4C54-BA22-0C5EF45D34AF}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JSopX.ClassLibrary", "JSopX.ClassLibrary\JSopX.ClassLibrary\JSopX.ClassLibrary.csproj", "{5EA44A68-6B98-41B4-B1BF-0C66C9C5E9E8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{70B580BB-BDE4-4C54-BA22-0C5EF45D34AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{70B580BB-BDE4-4C54-BA22-0C5EF45D34AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{70B580BB-BDE4-4C54-BA22-0C5EF45D34AF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5EA44A68-6B98-41B4-B1BF-0C66C9C5E9E8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5EA44A68-6B98-41B4-B1BF-0C66C9C5E9E8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5EA44A68-6B98-41B4-B1BF-0C66C9C5E9E8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5EA44A68-6B98-41B4-B1BF-0C66C9C5E9E8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
