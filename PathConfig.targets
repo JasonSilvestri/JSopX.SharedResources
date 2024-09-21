@@ -1,0 +1,9 @@
+<Project>
+  <PropertyGroup>
+    <SharedResourcesClassLibraryPath>..\JSopX.ClassLibrary\JSopX.ClassLibrary</SharedResourcesClassLibraryPath>
+    </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="$(SharedResourcesClassLibraryPath)\JSopX.ClassLibrary.csproj" />
+  </ItemGroup>
+</Project>

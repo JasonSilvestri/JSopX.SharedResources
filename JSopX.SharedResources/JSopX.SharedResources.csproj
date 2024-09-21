@@ -6,6 +6,10 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+    
+  <Import Project="..\PathConfig.targets" Condition="Exists('..\PathConfig.targets')" />
+
+
   <ItemGroup>
     <None Remove="android-chrome-192x192.png" />
     <None Remove="android-chrome-512x512.png" />
@@ -741,157 +745,10 @@
 
   <!--Option 1: Original-->
 
-  <!--<ItemGroup>
-    <ProjectReference Include="..\JSopX.ClassLibrary\JSopX.ClassLibrary\JSopX.ClassLibrary.csproj">
-    </ProjectReference>
-  </ItemGroup>-->
-
-  <!--Option 2: Working version-->
-  <!--<ItemGroup>
-    
-    
-  -->
-  <!-- Default case: Reference for JSopX.SharedResources -->
-  <!--
-  
-    <ProjectReference Condition="! $([System.String]::Copy($(ProjectPath)).Contains('JSopX.OpenProjectX'))"
-                      Include="..\JSopX.ClassLibrary\JSopX.ClassLibrary\JSopX.ClassLibrary.csproj">
-    </ProjectReference>
-
-    
-  -->
-  <!-- Special case: Reference for JSopX.OpenProjectX -->
-  <!--
-  
-    <ProjectReference Condition="$([System.String]::Copy($(ProjectPath)).Contains('JSopX.OpenProjectX\JSopX.SharedResources'))"
-                      Include="..\..\JSopX.ClassLibrary\JSopX.ClassLibrary\JSopX.ClassLibrary.csproj">
-    </ProjectReference>
-  </ItemGroup>-->
-
-
-  <!--Option 3: New code from Jason:-->
   <ItemGroup>
-
-    <!-- Default case: Reference for JSopX.SharedResources -->
-    <ProjectReference Condition="! $([System.String]::Copy($(ProjectPath)).Contains('JSopX.OpenProjectX')) AND ! $([System.String]::Copy($(ProjectPath)).Contains('JSopX.AspNetCore')) AND ! $([System.String]::Copy($(ProjectPath)).Contains('JSopX.BlazorServerCore')) AND ! $([System.String]::Copy($(ProjectPath)).Contains('JSopX.MauiHybridNetCore')) AND ! $([System.String]::Copy($(ProjectPath)).Contains('JSopX.AngularCore')) AND ! $([System.String]::Copy($(ProjectPath)).Contains('JSopX.ReactCore')) AND ! $([System.String]::Copy($(ProjectPath)).Contains('JSopX.VueCore'))" Include="..\JSopX.ClassLibrary\JSopX.ClassLibrary\JSopX.ClassLibrary.csproj">
-    </ProjectReference>
-
-    <!-- Special case: Reference for JSopX.OpenProjectX -->
-    <ProjectReference Condition="$([System.String]::Copy($(ProjectPath)).Contains('JSopX.OpenProjectX\JSopX.SharedResources'))" Include="..\..\JSopX.ClassLibrary\JSopX.ClassLibrary\JSopX.ClassLibrary.csproj">
-    </ProjectReference>
-
-    <!-- Special case: Reference for JSopX.OpenProjectX and JSopX.AspNetCore -->
-    <ProjectReference Condition="$([System.String]::Copy($(ProjectPath)).Contains('JSopX.OpenProjectX\JSopX.AspNetCore\JSopX.SharedResources'))" Include="..\..\..\JSopX.ClassLibrary\JSopX.ClassLibrary\JSopX.ClassLibrary.csproj">
-    </ProjectReference>
-
-    <!-- Special case: Reference for just JSopX.AspNetCore -->
-    <ProjectReference Condition="$([System.String]::Copy($(ProjectPath)).Contains('JSopX.AspNetCore\JSopX.SharedResources'))" Include="..\..\JSopX.ClassLibrary\JSopX.ClassLibrary\JSopX.ClassLibrary.csproj">
-    </ProjectReference>
-
-
-
-    <!-- Special case: Reference for JSopX.OpenProjectX and JSopX.BlazorServerCore -->
-    <ProjectReference Condition="$([System.String]::Copy($(ProjectPath)).Contains('JSopX.OpenProjectX\JSopX.BlazorServerCore\JSopX.SharedResources'))" Include="..\..\..\JSopX.ClassLibrary\JSopX.ClassLibrary\JSopX.ClassLibrary.csproj">
-    </ProjectReference>
-
-    <!-- Special case: Reference for just JSopX.BlazorServerCore -->
-    <ProjectReference Condition="$([System.String]::Copy($(ProjectPath)).Contains('JSopX.BlazorServerCore\JSopX.SharedResources'))" Include="..\..\JSopX.ClassLibrary\JSopX.ClassLibrary\JSopX.ClassLibrary.csproj">
-    </ProjectReference>
-
-
-
-    <!-- Special case: Reference for JSopX.OpenProjectX and JSopX.MauiHybridNetCore -->
-    <ProjectReference Condition="$([System.String]::Copy($(ProjectPath)).Contains('JSopX.OpenProjectX\JSopX.MauiHybridNetCore\JSopX.SharedResources'))" Include="..\..\..\JSopX.ClassLibrary\JSopX.ClassLibrary\JSopX.ClassLibrary.csproj">
-    </ProjectReference>
-
-    <!-- Special case: Reference for just JSopX.MauiHybridNetCore -->
-    <ProjectReference Condition="$([System.String]::Copy($(ProjectPath)).Contains('JSopX.MauiHybridNetCore\JSopX.SharedResources'))" Include="..\..\JSopX.ClassLibrary\JSopX.ClassLibrary\JSopX.ClassLibrary.csproj">
-    </ProjectReference>
-
-
-
-    <!-- Special case: Reference for JSopX.OpenProjectX and JSopX.AngularCore -->
-    <ProjectReference Condition="$([System.String]::Copy($(ProjectPath)).Contains('JSopX.OpenProjectX\JSopX.AngularCore\JSopX.SharedResources'))" Include="..\..\..\JSopX.ClassLibrary\JSopX.ClassLibrary\JSopX.ClassLibrary.csproj">
-    </ProjectReference>
-
-    <!-- Special case: Reference for just JSopX.AngularCore -->
-    <ProjectReference Condition="$([System.String]::Copy($(ProjectPath)).Contains('JSopX.AngularCore\JSopX.SharedResources'))" Include="..\..\JSopX.ClassLibrary\JSopX.ClassLibrary\JSopX.ClassLibrary.csproj">
-    </ProjectReference>
-
-
-
-    <!-- Special case: Reference for JSopX.OpenProjectX and JSopX.ReactCore -->
-    <ProjectReference Condition="$([System.String]::Copy($(ProjectPath)).Contains('JSopX.OpenProjectX\JSopX.ReactCore\JSopX.SharedResources'))" Include="..\..\..\JSopX.ClassLibrary\JSopX.ClassLibrary\JSopX.ClassLibrary.csproj">
-    </ProjectReference>
-
-    <!-- Special case: Reference for just JSopX.ReactCore -->
-    <ProjectReference Condition="$([System.String]::Copy($(ProjectPath)).Contains('JSopX.ReactCore\JSopX.SharedResources'))" Include="..\..\JSopX.ClassLibrary\JSopX.ClassLibrary\JSopX.ClassLibrary.csproj">
-    </ProjectReference>
-
-    <!-- Special case: Reference for JSopX.OpenProjectX and JSopX.VueCore -->
-    <ProjectReference Condition="$([System.String]::Copy($(ProjectPath)).Contains('JSopX.OpenProjectX\JSopX.VueCore\JSopX.SharedResources'))" Include="..\..\..\JSopX.ClassLibrary\JSopX.ClassLibrary\JSopX.ClassLibrary.csproj">
-    </ProjectReference>
-
-    <!-- Special case: Reference for just JSopX.VueCore -->
-    <ProjectReference Condition="$([System.String]::Copy($(ProjectPath)).Contains('JSopX.VueCore\JSopX.SharedResources'))" Include="..\..\JSopX.ClassLibrary\JSopX.ClassLibrary\JSopX.ClassLibrary.csproj">
-    </ProjectReference>
-
-
-
+    <ProjectReference Include="$(SharedResourcesClassLibraryPath)\JSopX.ClassLibrary.csproj" />
+    <!--<ProjectReference Include="..\JSopX.ClassLibrary\JSopX.ClassLibrary\JSopX.ClassLibrary.csproj">
+    </ProjectReference>-->
   </ItemGroup>
-
-  <!--Option 3: New code from Nova:-->
-  <!--<ItemGroup>
-
-    -->
-  <!-- Default case: Reference for JSopX.SharedResources -->
-  <!--
-    <ProjectReference Condition="! $([System.String]::Copy($(ProjectPath)).Contains('JSopX.OpenProjectX')) AND ! $([System.String]::Copy($(ProjectPath)).Contains('JSopX.AspNetCore')) AND ! $([System.String]::Copy($(ProjectPath)).Contains('JSopX.BlazorServerCore')) AND ! $([System.String]::Copy($(ProjectPath)).Contains('JSopX.MauiHybridNetCore')) AND ! $([System.String]::Copy($(ProjectPath)).Contains('JSopX.AngularCore')) AND ! $([System.String]::Copy($(ProjectPath)).Contains('JSopX.ReactCore')) AND ! $([System.String]::Copy($(ProjectPath)).Contains('JSopX.VueCore'))" Include="..\JSopX.ClassLibrary\JSopX.ClassLibrary\JSopX.ClassLibrary.csproj">
-    </ProjectReference>
-
-    -->
-  <!-- Special case: Reference for JSopX.OpenProjectX -->
-  <!--
-    <ProjectReference Condition="$([System.String]::Copy($(ProjectPath)).Contains('JSopX.OpenProjectX\JSopX.SharedResources'))" Include="..\..\JSopX.ClassLibrary\JSopX.ClassLibrary\JSopX.ClassLibrary.csproj">
-    </ProjectReference>
-
-    -->
-  <!-- Special case: Reference for just JSopX.AspNetCore -->
-  <!--
-    <ProjectReference Condition="$([System.String]::Copy($(ProjectPath)).Contains('JSopX.AspNetCore\JSopX.SharedResources'))" Include="..\..\JSopX.ClassLibrary\JSopX.ClassLibrary\JSopX.ClassLibrary.csproj">
-    </ProjectReference>
-
-    -->
-  <!-- Special case: Reference for JSopX.BlazorServerCore -->
-  <!--
-    <ProjectReference Condition="$([System.String]::Copy($(ProjectPath)).Contains('JSopX.BlazorServerCore\JSopX.SharedResources'))" Include="..\..\JSopX.ClassLibrary\JSopX.ClassLibrary\JSopX.ClassLibrary.csproj">
-    </ProjectReference>
-
-
-    -->
-  <!-- Special case: Reference for JSopX.MuiHybridNetCore -->
-  <!--
-    <ProjectReference Condition="$([System.String]::Copy($(ProjectPath)).Contains('JSopX.MauiHybridNetCore\JSopX.SharedResources'))" Include="..\..\JSopX.ClassLibrary\JSopX.ClassLibrary\JSopX.ClassLibrary.csproj">
-    </ProjectReference>
-
-    -->
-  <!-- Special case: Reference for JSopX.AngularCore -->
-  <!--
-    <ProjectReference Condition="$([System.String]::Copy($(ProjectPath)).Contains('JSopX.AngularCore\JSopX.SharedResources'))" Include="..\..\JSopX.ClassLibrary\JSopX.ClassLibrary\JSopX.ClassLibrary.csproj">
-    </ProjectReference>
-
-    -->
-  <!-- Special case: Reference for JSopX.ReactCore -->
-  <!--
-    <ProjectReference Condition="$([System.String]::Copy($(ProjectPath)).Contains('JSopX.ReactCore\JSopX.SharedResources'))" Include="..\..\JSopX.ClassLibrary\JSopX.ClassLibrary\JSopX.ClassLibrary.csproj">
-    </ProjectReference>
-
-    -->
-  <!-- Special case: Reference for JSopX.VueCore -->
-  <!--
-    <ProjectReference Condition="$([System.String]::Copy($(ProjectPath)).Contains('JSopX.VueCore\JSopX.SharedResources'))" Include="..\..\JSopX.ClassLibrary\JSopX.ClassLibrary\JSopX.ClassLibrary.csproj">
-    </ProjectReference>
-
-  </ItemGroup>-->
 
 </Project>
