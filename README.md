@@ -45,7 +45,7 @@ $ git clone https://github.com/JasonSilvestri/JSopX.SharedResources.git
 
 The **JSopX™ Shared Resources Project**, _code named_, `JSopX.SharedResources` is a totally **FREE**, open-source, Class Library, and a traditional hub for common resources—images, fonts, scripts, localizations—that feed into multiple projects. Initially a central class library, it highlights the benefits of having a single source for shared assets.
 
-We initially create the project to simulate a [Shared Assets & Resources Projects](https://github.com/JasonSilvestri/JSopX.BridgeTooFar/tree/master/JSopX.BridgeTooFar/DocsOpenX/Introduction/JSopxProjectsFamilies.md#2-shared-assets--resources-projects) that will need to be leveraged by the other new and existing client side and server side projects, which act as standards that conform to the initial [business requirements](https://github.com/JasonSilvestri/JSopX.BridgeTooFar/tree/master/JSopX.BridgeTooFar/DocsOpenX/https://github.com/JasonSilvestri/JSopX.BridgeTooFar/tree/master/JSopX.BridgeTooFar/DocsOpenX/Introduction/JSopxEnterpriseBusinessRequirements.md) set forth by the fictional stakeholders.
+We initially create the project to simulate a [Shared Assets & Resources Projects](https://github.com/JasonSilvestri/JSopX.BridgeTooFar/tree/master/JSopX.BridgeTooFar/DocsOpenX/Introduction/JSopxProjectsFamilies.md#2-shared-assets--resources-projects) that will need to be leveraged by the other new and existing client side and server side projects, which act as standards that conform to the initial [business requirements](https://github.com/JasonSilvestri/JSopX.BridgeTooFar/tree/master/JSopX.BridgeTooFar/DocsOpenX/Introduction/JSopxEnterpriseBusinessRequirements.md) set forth by the fictional stakeholders.
 
 As the project evolves through each [Lifecycle Phase](https://github.com/JasonSilvestri/JSopX.BridgeTooFar/tree/master/JSopX.BridgeTooFar/DocsOpenX/Phases/ReadMe.md), we extend the application by creating new user interfaces, the integratation of standardized assets and resources commonly used across projects that comply to the stakeholder's brand standards we are tasked with creating, perform typical increase of security and documentation, while anticipating we'll face a near-future, seamless migration request of the project into our [JSopX.OpenProjectX](https://github.com/JasonSilvestri/JSopX.BridgeTooFar/tree/master/JSopX.BridgeTooFar/DocsOpenX/OpenProjects/jsopx.OpenProjectX/) Enterprise Application.
 
@@ -198,11 +198,11 @@ Verify that all NuGet packages are up to date:
 
 ## **Step 4: Be Sure to Build and Run**
 
-Building and Running the `JSopX.BridgeToFar` Project in Visual Studio is also another simple task.
+Building and Running the `JSopX.BridgeTooFar` Project in Visual Studio is also another simple task.
 
 ### **Step: 4.1: Build and Run**:
 
-1. Build the solution in [Visual Studio](https://github.com/JasonSilvestri/JSopX.BridgeTooFar/tree/master/JSopX.BridgeTooFar/DocsOpenX/https://github.com/JasonSilvestri/JSopX.BridgeTooFar/tree/master/JSopX.BridgeTooFar/DocsOpenX/OpenProjects/jsopx.BridgeToFar/p1/v1/Technologies/#visual-studio).
+1. Build the solution in [Visual Studio](https://github.com/JasonSilvestri/JSopX.BridgeTooFar/tree/master/JSopX.BridgeTooFar/DocsOpenX/OpenProjects/jsopx.BridgeTooFar/p1/v1/Technologies/#visual-studio).
 2. Run the project:
    - Use the **IIS Express** profile for local development.
 
@@ -210,7 +210,7 @@ Building and Running the `JSopX.BridgeToFar` Project in Visual Studio is also an
 
 ### **Step: 4.2: And Now Your Done**:
 
-Assuming the `JSopX.BridgeToFar` Project is running as expected, **you are now done** with the **installation** and **execution** of the project!
+Assuming the `JSopX.BridgeTooFar` Project is running as expected, **you are now done** with the **installation** and **execution** of the project!
 
 1. **Skip Remaining Steps**: 
    - Technically, you could skip to the [Next Steps](#next-steps) section if you are on a project-by-project installation mission.
